@@ -1,11 +1,19 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest/globals": true
     },
     "extends": "airbnb-base",
     "overrides": [
+      {
+        "files": ["test/**"],
+        "plugins": ["jest"],
+        "extends": ["plugin:jest/recommended"],
+        "rules": { "jest/prefer-expect-assertions": "off" }
+      }
     ],
+    "plugins": ["jest"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -16,6 +24,11 @@
           "error",
           "double"
       ],
-      "linebreak-style": ["error", "windows"]
+      "linebreak-style": ["error", "windows"],
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-expect": "error"
     }
 }
