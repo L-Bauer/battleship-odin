@@ -1,5 +1,7 @@
-import shipFactory from "../js/main";
+import ShipFactory from "../js/main";
 
-test("Sum 1+1 = 2", () => {
-  expect(shipFactory().x(2)).toBe(2);
+const ship = ShipFactory();
+
+test("Create new ship with length of 3", () => {
+  expect(ship.getLength()).toBe(3);
 });
