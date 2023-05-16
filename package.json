@@ -4,7 +4,7 @@
   "description": "Build a battleship game using TDD.",
   "private": true,
   "scripts": {
-    "test": "jest --watch ./src/test/*.js",
+    "test": "jest --watch ./src/__test__/*.js",
     "watch": "webpack --watch",
     "build": "webpack"
   },
