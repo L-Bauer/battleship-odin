@@ -8,7 +8,10 @@ test("Size of gameboard", () => {
 describe("Placing Ships on board", () => {
   const ship = ShipFactory({ length: 3 });
 
-  test("Place ship of size three on board", () => {
-    expect(gameBoard.placeShip([0][0], ship)).toBe(true);
+  test("Place a ship horizontal", () => {
+    gameBoard.placeShip([0][0], ship);
+    expect(gameBoard.board[0][0]).toBe("S");
+    expect(gameBoard.board[1][0]).toBe("S");
+    expect(gameBoard.board[0][1]).toBe("S");
   });
 });
