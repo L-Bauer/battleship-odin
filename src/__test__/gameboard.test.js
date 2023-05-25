@@ -21,4 +21,12 @@ describe("Placing Ships on board", () => {
     expect(gameBoard.board[51]).toBe("S");
     expect(gameBoard.board[52]).toBe("S");
   });
+
+  test("Place ship at 26 should be a valid location", () => {
+    expect(gameBoard.placeShip([26], ship.getLength())).toBe(true);
+  });
+
+  test("Place a ship at 38 should be an invalid location", () => {
+    expect(gameBoard.placeShip([38], ship.getLength())).toBe(false);
+  });
 });
