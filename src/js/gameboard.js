@@ -1,5 +1,3 @@
-import { tr } from "date-fns/locale";
-
 const gameBoard = (() => {
   const board = Array(100).fill("w");
   const endOfBoard = [9, 19, 29, 39, 49, 59, 69, 79, 89, 99];
